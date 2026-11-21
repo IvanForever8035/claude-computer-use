@@ -1,10 +1,10 @@
 {
-  "name": "native-windows-tools",
-  "metadata": { "description": "Native Windows automation tools for Claude Code CLI." },
-  "owner": { "name": "Windows Desktop MCP Maintainers" },
+  "name": "ivan-tools",
+  "metadata": { "description": "Claude Code plugins by IvanForever8035." },
+  "owner": { "name": "IvanForever8035" },
   "plugins": [
     {
-      "name": "windows-desktop",
+      "name": "computer-use",
       "source": "./",
       "description": "Operate the requested Windows app window without writing task screenshots or scripts."
     }

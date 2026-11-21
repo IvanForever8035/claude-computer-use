@@ -1,4 +1,4 @@
-# Windows Desktop MCP
+# claude-computer-use
 
 面向原生 Windows 版 Claude Code CLI 的桌面操控插件：只读取指定程序的窗口，优先使用可访问性树，必要时使用本机 OCR 或窗口截图。工具不创建任务脚本、截图或导出的界面文件。
 
@@ -10,16 +10,25 @@
 
 ```powershell
 claude plugin marketplace add IvanForever8035/claude-computer-use --scope user
-claude plugin install windows-desktop@native-windows-tools --scope user
+claude plugin install computer-use@ivan-tools --scope user
 ```
 
 Claude Code 2.1.292+ 也可使用：
 
 ```powershell
-claude plugin install windows-desktop --marketplace IvanForever8035/claude-computer-use --scope user
+claude plugin install computer-use --marketplace IvanForever8035/claude-computer-use --scope user
 ```
 
-重启 Claude Code 或使用 `/reload-plugins`，再用 `/mcp` 查看连接。用户级安装对同一 Claude Code 配置下的其他本机工作区可用。安装只使用 Claude Code 自身的插件配置、市场检出目录和缓存，不改项目配置。
+新安装完成后，完整重启 Claude Code，再用 `/mcp` 确认 `plugin:computer-use:desktop` 已连接。用户级安装对同一 Claude Code 配置下的其他本机工作区可用。安装只使用 Claude Code 自身的插件配置、市场检出目录和缓存，不改项目配置。
+
+### 从旧版迁移
+
+v0.3.0 将插件 ID 从 `windows-desktop@native-windows-tools` 改为 `computer-use@ivan-tools`。这不是原 ID 的就地更新。先按上面的命令安装新版，再移除旧插件及旧市场注册，然后完整重启 Claude Code：
+
+```powershell
+claude plugin uninstall windows-desktop@native-windows-tools --scope user
+claude plugin marketplace remove native-windows-tools --scope user
+```
 
 ## 使用
 
@@ -43,8 +52,8 @@ claude --plugin-dir .
 `--plugin-dir` 用来试加载，不做用户级安装。卸载已安装版本：
 
 ```powershell
-claude plugin uninstall windows-desktop@native-windows-tools --scope user
-claude plugin marketplace remove native-windows-tools --scope user
+claude plugin uninstall computer-use@ivan-tools --scope user
+claude plugin marketplace remove ivan-tools --scope user
 ```
 
 ## 许可证

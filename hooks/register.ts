@@ -1,6 +1,6 @@
 import type { Register } from 'claude-code'
 
-const server = 'plugin:windows-desktop:desktop'
+const server = 'plugin:computer-use:desktop'
 
 export const register: Register = (on) => {
   // The backend decides whether anything is safe to restore: it only acts when an

@@ -487,7 +487,7 @@ while ($null -ne ($line = [Console]::ReadLine())) {
     switch -CaseSensitive ($request.method) {
         'initialize' {
             $protocol = if ($params.protocolVersion -cin @('2024-11-05','2025-03-26','2025-06-18','2025-11-25')) { $params.protocolVersion } else { '2025-06-18' }
-            $result = @{ protocolVersion = $protocol; capabilities = @{ tools = @{} }; serverInfo = @{ name = 'windows-desktop'; version = '0.2.0' }; instructions = 'For requested Windows desktop tasks only. Bind the named app, read minimal state, batch known actions, then verify. Do not save captures or task scripts.' }
+            $result = @{ protocolVersion = $protocol; capabilities = @{ tools = @{} }; serverInfo = @{ name = 'computer-use'; version = '0.3.0' }; instructions = 'For requested Windows desktop tasks only. Bind the named app, read minimal state, batch known actions, then verify. Do not save captures or task scripts.' }
         }
         'ping' { $result = @{} }
         'tools/list' { $result = @{ tools = @($tools) } }
