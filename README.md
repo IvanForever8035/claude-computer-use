@@ -44,3 +44,7 @@ claude --plugin-dir .
 claude plugin uninstall windows-desktop@native-windows-tools --scope user
 claude plugin marketplace remove native-windows-tools --scope user
 ```
+
+## 许可证
+
+以 [MIT 许可证](LICENSE) 发布，可自由使用、修改和再分发，保留版权声明即可。
