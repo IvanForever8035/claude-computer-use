@@ -1,0 +1,12 @@
+{
+  "name": "windows-desktop",
+  "version": "0.1.0",
+  "description": "Native Windows desktop automation for Claude Code CLI, with in-memory screenshots and local OCR.",
+  "mcpServers": {
+    "desktop": {
+      "type": "stdio",
+      "command": "powershell.exe",
+      "args": ["-NoLogo", "-NoProfile", "-NonInteractive", "-STA", "-File", "${CLAUDE_PLUGIN_ROOT}/desktop.ps1"]
+    }
+  }
+}
